@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block banner %}
+<div class="page-header-image" data-parallax="true" style="background-image: url({% static 'img/Corp/wizkid2.jpeg' %});">
+</div>
+
+{% endblock banner %}
+{% block dp %}
+<div class="photo-container">
+    <img src="{% static 'img/Corp/wizkid.jpeg' %}" alt="">
+</div>
+<h3 class="title">Wizkid</h3>
+{% endblock dp %}
+
+
+{% block content %}   
+{% for post in post_list %}
+<div class="tab-pane active infinite-container" id="home" role="tabpanel">                     
+                               <div class="media Tweets infinite-item">
+                                    <img class="mr-3 rounded-circle img-flex" src="{{post.banner_image_url}}" alt="Generic placeholder image">
+                                    <div class="media-body">
+                                        <h5 class="mt-0">{{post.name}}</h5>
+                                        {{post.description}}
+                                    </div>
+                                </div>
+                                
+                            
+</div>
+{% endfor %}
+{% if page_obj.has_next %}
+                <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
+                {% endif %}
+                <div class="d-flex justify-content-center" style="display:none;">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+</div>
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/infinite.min.js' %}"></script>
+    <script>
+    var infinite = new Waypoint.Infinite({
+        element: $('.infinite-container')[0],
+        handler: function(direction) {
+        
+    },
+    offset: 'bottom-in-view',
+    onBeforePageLoad: function () {
+    $('.spinner-border').show();
+    },
+    onAfterPageLoad: function () {
+    $('.spinner-border').hide();
+    }
+    
+        
+    });
+
+    </script>
+{% endblock content %} 
