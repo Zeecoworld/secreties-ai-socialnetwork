@@ -20,7 +20,7 @@ from django.urls import path
 from anonapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('adminnnnn/', admin.site.urls),
     # path('', views.index, name="index"),
     path('post/', views.post, name="post"),
     path('', views.FirstView.as_view(), name="index"),

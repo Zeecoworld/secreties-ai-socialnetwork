@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['secreties.herokuapp.com']
 
 INSTALLED_APPS = [
     'anonapp',
+    'django_social_share',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
