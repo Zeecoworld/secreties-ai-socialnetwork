@@ -1,4 +1,5 @@
 {% load static %}
+{% load social_share %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,11 +70,11 @@
                             Privacy policy
                         </a>
                     </li>
-                    {% comment %} <li>
-                        <a href="">
-                            About Us
+                    <li>
+                        <a href="{% post_to_whatsapp object_or_url %}">
+                            ShARE ON WHATSAPP
                         </a>
-                    </li> {% endcomment %}
+                    </li> 
                     <li>
                         <a href="">
                             ALL ABOUT SHARING YR <b>HIDDEN THOUGHTS</b> ABOUT CELEBRITIES!
