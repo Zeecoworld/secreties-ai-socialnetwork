@@ -3,6 +3,8 @@ from .models import Post
 from textblob import TextBlob
 from django.contrib import messages
 from django.views.generic.list import ListView
+from django.http.response import HttpResponse
+from django.http import HttpResponse
 # Create your views here.
 # CHOICES_STATUS = (
 #         (Davido, 'Davido'),
@@ -16,6 +18,13 @@ def policy(request):
 
 
     return render(request, "policy.html")
+
+def robots_txt(request):
+    text = [
+        "User-Agent: *",
+        "Disallow: /adminnnnn/",
+    ]
+    return HttpResponse("\n".join(text), content_type="text/plain")
 
 
 class FirstView(ListView):
