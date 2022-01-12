@@ -21,4 +21,4 @@ class PostSitemap(Sitemap):
         return Post.objects.filter(category=CHOICES_STATUS)
     
     def lastmod(self, obj):
-        return obj.created_at
+        return obj.create_date
