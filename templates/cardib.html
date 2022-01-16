@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
-{% load static %} 
+{% load static %}
+{% load youtube %} 
 {% block banner %}
 <div class="page-header-image" data-parallax="true" style="background-image: url({% static 'img/Corp/cardib.jpg' %});">
 </div>
@@ -20,7 +21,7 @@
                                     <img class="mr-3 rounded-circle img-flex" src="{{post.banner_image_url}}" alt="Generic placeholder image">
                                     <div class="media-body">
                                         <h5 class="mt-0">{{post.name}}</h5>
-                                        {{post.description}}
+                                        {{post.description|format_youtube}}
                                     </div>
                                 </div>
                                 
