@@ -21,7 +21,7 @@ from anonapp import views
 from django.contrib import sitemaps
 from django.contrib.sitemaps.views import sitemap
 
-from .sitemap import PostSitemap
+from .sitemap import PostSitemap,StaticSiteMap
 
 sitemaps = {'post': PostSitemap,'static':StaticSiteMap}
 
