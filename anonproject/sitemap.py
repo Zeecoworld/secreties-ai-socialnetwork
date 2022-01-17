@@ -14,6 +14,15 @@ from anonapp.models import Post
 #         (Cardib,  'Cardib')
 #     )
 
+class StaticSiteMap(Sitemap):
+    priority = 1.0
+    changefreq = 'yearly'
+
+    def items(self):
+        return ['policy']
+
+    def location(self,item):
+        return reverse(item)
 
 
 class PostSitemap(Sitemap):
