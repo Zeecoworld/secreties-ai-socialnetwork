@@ -29,6 +29,8 @@ httpcore==0.9.1
 httpx==0.13.3
 hyperframe==5.2.0
 idna==2.10
+joblib==1.1.0
+nltk==3.6.7
 platformdirs==2.4.0
 psycopg2==2.9.2
 pycares==4.1.2
@@ -42,6 +44,7 @@ six==1.16.0
 sniffio==1.2.0
 soupsieve==2.3.1
 sqlparse==0.4.2
+textblob==0.17.1
 tqdm==4.62.3
 typer==0.4.0
 urllib3==1.26.7
