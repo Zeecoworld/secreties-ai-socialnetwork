@@ -19,6 +19,9 @@ def policy(request):
 
     return render(request, "policy.html")
 
+
+
+
 def robots_txt(request):
     text = [
         "User-Agent: *",

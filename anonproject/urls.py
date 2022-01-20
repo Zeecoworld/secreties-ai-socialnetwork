@@ -6,9 +6,9 @@ from anonapp import views
 from django.contrib import sitemaps
 from django.contrib.sitemaps.views import sitemap
 
-from .sitemap import StaticSiteMap
+from .sitemap import PostSitemap,StaticSiteMap
 
-sitemaps = {'static':StaticSiteMap}
+sitemaps = {'post':PostSitemap,'static':StaticSiteMap}
 
 urlpatterns = [
     path('site_map.xml/', sitemap, {'sitemaps': sitemaps}),
