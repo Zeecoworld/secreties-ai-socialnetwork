@@ -25,9 +25,9 @@ class StaticSiteMap(Sitemap):
         return reverse(item)
 
 
-class PostSitemap(Sitemap):
-    def items(self):
-        return Post.objects.filter(category=CHOICES_STATUS)
+# class PostSitemap(Sitemap):
+#     def items(self):
+#         return Post.objects.filter(category=CHOICES_STATUS)
     
-    def lastmod(self, obj):
-        return obj.create_date
+#     def lastmod(self, obj):
+#         return obj.create_date

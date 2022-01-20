@@ -8,7 +8,7 @@ from django.contrib.sitemaps.views import sitemap
 
 from .sitemap import PostSitemap,StaticSiteMap
 
-sitemaps = {'post': PostSitemap,'static':StaticSiteMap}
+sitemaps = {'static':StaticSiteMap}
 
 urlpatterns = [
     path('site_map.xml/', sitemap, {'sitemaps': sitemaps}),
