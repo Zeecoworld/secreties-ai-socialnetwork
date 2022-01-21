@@ -16,17 +16,10 @@
 <div class="tab-pane active infinite-container" id="home" role="tabpanel">                     
                                <div class="media Tweets infinite-item">
                                     <img class="mr-3 rounded-circle img-flex" src="{{post.banner_image_url}}" alt="Generic placeholder image">
-                                {% if format_youtube %}
                                     <div class="media-body">
                                         <h5 class="mt-0">{{post.name}}</h5>
                                         {{post.description|format_youtube|safe}}
                                     </div>
-                                {% else %}
-                                    <div class="media-body">
-                                        <h5 class="mt-0">{{post.name}}</h5>
-                                        {{post.description|urlize}}
-                                    </div>
-                                {% endif %}
                                 </div>
                                 
                             
