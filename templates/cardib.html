@@ -21,7 +21,7 @@
                                     <img class="mr-3 rounded-circle img-flex" src="{{post.banner_image_url}}" alt="Generic placeholder image">
                                     <div class="media-body">
                                         <h5 class="mt-0">{{post.name}}</h5>
-                                        {{post.description|format_youtube|safe}}
+                                        {{post.description|urlize}}
                                     </div>
                                 </div>
                                 
