@@ -27,7 +27,7 @@
                                 {% else %}
                                     <div class="media-body">
                                         <h5 class="mt-0">{{post.name}}</h5>
-                                        {{post.description}}
+                                        {{post.description|urlize}}
                                     </div>
                                 {% endif %}
                                 </div>
