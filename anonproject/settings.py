@@ -29,7 +29,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['secreties.tk','www.secreties.tk','secreties.herokuapp.com']
+ALLOWED_HOSTS = ['secreties.tk','www.secreties.tk']
 
 
 # Application definition
@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.sites',
     'django.contrib.sitemaps',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
 ]
 

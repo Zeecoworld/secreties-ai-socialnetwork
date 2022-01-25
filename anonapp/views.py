@@ -35,10 +35,16 @@ class FirstView(ListView):
     paginate_by = 7
     template_name = 'index.html'
 
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         context['post_list'] = Post.objects.filter(category='Davido').order_by('blob')
         return context
+        # youtube = format_youtube(context['post_list'].description)
+        # print(context['post_list'])
+        # for p in context['post_list']:
+        #     print(format_youtube(p.description))
+        
 
 
 class  CardView(ListView):

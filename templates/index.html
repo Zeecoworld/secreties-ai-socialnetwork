@@ -15,16 +15,12 @@
 {% for post in post_list %}
 <div class="tab-pane active infinite-container" id="home" role="tabpanel">                     
                                <div class="media Tweets infinite-item">
-                                    <img class="mr-3 rounded-circle img-flex" src="{{post.banner_image_url}}" alt="Generic placeholder image">
-                             
+                                    <img class="mr-3 rounded-circle img-flex" src="{{post.banner_image_url}}" alt="Generic placeholder image">  
                                     <div class="media-body">
                                         <h5 class="mt-0">{{post.name}}</h5>
                                         {{post.description|format_youtube|safe}}
                                     </div>
-                              
-                                </div>
-                                
-                            
+                                </div>                            
 </div>
 {% endfor %}
 {% if page_obj.has_next %}
