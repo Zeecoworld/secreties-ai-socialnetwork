@@ -44,7 +44,7 @@ CHOICES_STATUS = (
 class Post(models.Model):
     name = models.CharField(max_length=30)
     category = models.CharField(max_length=128,choices=CHOICES_STATUS, verbose_name="category")
-    description = models.CharField(max_length=350)
+    description = models.CharField(max_length=2000)
     blob = models.DecimalField(max_digits=3, decimal_places=2)
     banner_image_url = models.URLField(help_text="Provide a banner image for your post", default=choice) 
     create_date = models.DateTimeField(auto_now_add=True)
