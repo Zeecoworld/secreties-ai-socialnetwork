@@ -83,28 +83,28 @@ WSGI_APPLICATION = 'anonproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE':'django.db.backends.postgresql',
-
-#             'NAME': "d23ai09n38i3m5",
-                                            
-#             'USER': "bxfecmwtypmdtx",
-
-#             'PASSWORD': "d41a07a05abc5f9908149dae9c7ac211426aca6b84ac462c04b551d0c916bd26",
-
-#             'HOST' : "ec2-34-205-230-1.compute-1.amazonaws.com",
-
-#             'PORT' : 5432,
-                                
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE':'django.db.backends.postgresql',
+
+            'NAME': "d23ai09n38i3m5",
+                                            
+            'USER': "bxfecmwtypmdtx",
+
+            'PASSWORD': "d41a07a05abc5f9908149dae9c7ac211426aca6b84ac462c04b551d0c916bd26",
+
+            'HOST' : "ec2-34-205-230-1.compute-1.amazonaws.com",
+
+            'PORT' : 5432,
+                                
+    }
+}
 
 
 # Password validation
